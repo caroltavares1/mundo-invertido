@@ -1,0 +1,73 @@
+@import url("./reset.css");
+@import url("./themes.css");
+
+h1,
+h2,
+h3 {
+  font-family: var(--featured-font-family);
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: 4.8rem;
+}
+
+p {
+  color: var(--highlight-color);
+}
+
+p,
+input,
+textarea,
+label {
+  font-family: "Libre Baskerville", serif;
+}
+
+header {
+  background-color: var(--header-background-color);
+  min-height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url("../images/banner/florest.webp") no-repeat center 90% / cover;
+  position: absolute;
+  filter: saturate(0);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+header .header-content {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5rem;
+  padding-top: 50px;
+}
+header .header-content p {
+  text-align: center;
+}
+
+button#switch-theme-button {
+  font-family: var(--featured-font-family);
+  font-size: 2rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  width: 284px;
+  height: 54px;
+  background-color: transparent;
+  border: 3px solid var(--primary-color);
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+button#switch-theme-button:hover {
+  background-color: var(--primary-color);
+  color: var(--primary-color-contrast);
+}
