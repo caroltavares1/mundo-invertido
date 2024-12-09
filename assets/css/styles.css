@@ -97,6 +97,8 @@ button#switch-theme-button:hover {
 }
 
 main {
+  width: 100%;
+  background: var(--page-background), url("../images/backgrounds/florest.png") no-repeat center/cover;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -147,4 +149,82 @@ section {
   border: 2px solid;
   border-image: linear-gradient(var(--primary-color), var(--primary-color-contrast));
   border-image-slice: 10;
+}
+
+#section-stranger-things-gallery {
+  width: 100%;
+  justify-content: center;
+  background: var(--background-lamp-image) no-repeat 120%/50%;
+}
+
+#section-stranger-things-gallery .section-text h2 {
+  width: 60%;
+}
+
+.gallery-container {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5rem;
+}
+
+.gallery-image {
+  width: 250px;
+  height: 250px;
+  background-color: var(--highlight-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures cropped parts are hidden */
+}
+
+#section-stranger-things-gallery .gallery-container .gallery-image img {
+  width: 230px;
+  height: 230px;
+  border: 1px solid var(--primary-color);
+  object-fit: cover;
+  background-color: var(--highlight-color);
+  padding: 10px;
+}
+.gallery-container .gallery-image:nth-child(even) img {
+  object-position: 60% center;
+}
+#section-stranger-things-gallery .gallery-container .gallery-image:nth-child(odd) img {
+  object-position: center;
+}
+
+footer::before,
+footer::after {
+  content: "";
+  width: 300px;
+  height: 200px;
+  background-image: url("../images/footer/tape.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: -30px;
+}
+footer::before {
+  left: -50px;
+  transform: rotateZ(-10deg);
+}
+footer::after {
+  right: -50px;
+  transform: rotateZ(10deg);
+}
+footer {
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--footer-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+footer p {
+  max-width: 700px;
+  text-align: center;
 }
